@@ -31,3 +31,4 @@ Para esto vamos a concentrarnos en 2 componentes (uno dumb y otro smart)
 - Recibir dias especificos a desahabilitar
 - Al cambiar las fechas mantener la seleccion
 
+Comenzemos con el [paso 1](./pasos/paso-1.1.md)
