@@ -25,7 +25,8 @@ describe('when click a date', () => {
       })
 ```
 
-Ahora vamos a escribir el codigo para que este test pase:
+Corremos los tests, vemos que falla, y escribinmos el codigo para hacerlo pasar:
+
 ```jsx
 {week.map(
         (date) => {
