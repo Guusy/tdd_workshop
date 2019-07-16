@@ -1,36 +1,48 @@
 ## Paso 1.1
-Es este paso vamos a encargarnos de crear renderizar las semanas que nos pasen via `props`
-1) Run command test to watch it
+Renderizar las semanas que nos pasen via `props`
+1) Comando para correr los tests
 ```
 npm run test
 ```
 
 ### Partes del test
  
-Para facilitar la lectura de los test, creamos una funcion `setup` que se provee de devolvernos el componente (o diferentes partes del mismo) con las props que le pasemos + unas props default que le querramos declarar, asi tenenemos contextos mas descriptivos
+Para facilitar la lectura de los test, vamos a crear una funcion `setup`, que nos va a permitir instanciar el componente y devolvernos los selectores del mismo.
+Ejemplo:
 
-Ahora para ver que ver que renderizen correctamente las semanas que le pasamos vamos a agregar un propiedad llamada `weeks` en el retorno de la funcion `setup` que nos va a retornar todas las semanas que estan renderizadas en nuestro componente:
-```
-weeks: wrapper.find('.date-picker__week')
+```js
+const setup = (props) => {
+   const wrapper = shallow(<DatePicker {...props}>)
+
+   return {
+     wrapper,
+     weeks: wrapper.find('.date-picker__week'),
+   }
+}
 ```
 
-De esta manera dentro del contexto podemos hacer esto
-```
+De esta manera podemos hacer esto en nuestros tests:
+```js
 const { weeks } = setup({weeks:[VALOR DE LAS SEMANAS]})
 ```
 
-Entonces... ahora deberiamos pensar cual es el formato en que queremos recibir las semanas que contienen dias, para no quemarnos la cabeza propongo el siguiente formato:
+Entonces... ahora deberiamos pensar cual es el formato en que queremos recibir las semanas. Para no quemarnos la cabeza propongo el siguiente:
 
 ```js
 {
     weeks:[ // seria el mes la composicion de 4 semanas
         [ // esto es una semana (de length 7)
-        ],  
+          1,2,3,4,5,6,7
+        ],
+        [
+          8,9,10,11,12,13,14
+        ],
+        ...
     ]
 }
     
 ```
-Aca ya tomamos varias decisione de disenio
+Aca ya tomamos varias decisiones de diseño (vamos diseñando a medida que implementamos los tests).
 
 2) Entonces vamos al file `DatePicker.spec.js` y escribimos el primer test
 
