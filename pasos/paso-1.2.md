@@ -28,7 +28,10 @@ const weeksValue = [
 const { weeks, getDate } = setup({ weeks: weeksValue })
 ```
 
-y agregamos un test para verificar que los dias se renderizen correctamente, si bien tener 2 asserts en un mismo test, esta mal, en este caso aplica por que no son 2 clases de equivalencias diferentes
+Nota: En general conviene tener el contexto en un `beforeEach` para asegurarnos de que los tests sean independientes entre sí, pero en este caso podemos dejarlo así porque sabemos que nuestro código no va a tener efecto de lado.
+
+y agregamos un test para verificar que los dias se renderizen correctamente. 
+En general tener 2 asserts en un mismo test es considerado una mala práctica, pero en este caso lo hacemos porque esos dos assertions comprenden lo que esperamos que pase cuando decimos que se 'renderizan los días'.
 ```js
 it('render the dates', () => {
         expect(getDate(firstDate).text()).toEqual(firstDate.day.toString())
@@ -36,7 +39,9 @@ it('render the dates', () => {
 })
 ```      
 
-Ahora vamos a hacer el codigo para que este test pase !
+Corremos los tests, vemos que falla.
+
+Y ahora vamos a hacer el codigo para que este test pase!
 
 ```jsx
 {weeks.map((week) => <tr className="date-picker__week">
