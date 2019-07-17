@@ -2,7 +2,16 @@
 
 ## Que vamos a hacer ?
 
-Vamos a hacer un componente de calendario:
+1) Una billetera virtual en la cual vamos a poder:
+
+- Hacer transacciónes
+    - Las transacciónes de credito van a agregar plata a nuestra cuenta
+    - Las transacciónes de debito van a restar nuestro saldo
+- Ver el estado de la cuenta
+
+Comenzemos con el [paso 1](./pasos/wallet/paso-1.md)
+
+2) Un componente React de calendario:
 
 ![](./src_readme/demo_component.gif)
 
