@@ -28,7 +28,8 @@ const weeksValue = [
 const { weeks, getDate } = setup({ weeks: weeksValue })
 ```
 
-y agregamos un test para verificar que los dias se renderizen correctamente, si bien tener 2 asserts en un mismo test, esta mal, en este caso aplica por que no son 2 clases de equivalencias diferentes
+y agregamos un test para verificar que los dias se renderizen correctamente, si bien tener 2 asserts en un mismo test, esta visto como una mala practica
+
 ```js
 it('render the dates', () => {
         expect(getDate(firstDate).text()).toEqual(firstDate.day.toString())
