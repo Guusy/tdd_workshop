@@ -1,5 +1,7 @@
 # Workshop TDD
 
+[Aqui](https://github.com/Guusy/tdd-workshop-quickstart) esta el codigo base para arrancar los siguientes ejercicios
+
 ## Que vamos a hacer ?
 
 1) Una billetera virtual en la cual vamos a poder:
