@@ -4,7 +4,7 @@ Objetivo: Mostrar el saldo disponible
 
 Comando para correr los tests
 ```
-npm run test
+npm run test -- -t="Wallet"
 ```
 
 Desde el comienzo ya tenemos que pensar 2 decisiones de diseño, si nuestra billetera virtual va ser una clase estatica o vamos la instanciar.

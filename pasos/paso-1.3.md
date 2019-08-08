@@ -39,5 +39,5 @@ Ahora vamos a escribir el codigo para que este test pase:
 [Aca](https://github.com/Guusy/tdd-workshop-quickstart/commit/69663d1b1178631be9d950bbfe0eadbe6814171d) podemos ver el codigo terminado de este paso
 
 
-Excelente ya hicimos que se puedan clickear los dias, ahora [pongamos un boton de aplicar](./paso-1.4.md)
+Excelente ya hicimos que se puedan clickear los dias, ahora [hagamos que nuestro componente entienda que hay un dia seleccionado](./paso-1.4.md)
 
