@@ -41,3 +41,5 @@ const Calendar = () => {
 ```
 
 Genial nuestros tests dan verde !
+
+Ahora hagamos que [podamos aplicar](./paso-1.7.md) la seleccion !
